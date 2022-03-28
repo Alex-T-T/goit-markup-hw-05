@@ -49,7 +49,20 @@ img {
   list-style: none;
 }
 .navigation-link.link.current {
+  position: relative;
   color: var(--color-logo);
+}
+.navigation-link.link.current::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -32.5px;
+
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-logo);
+  border-radius: 2px;
 }
 /* ==========START HEADER========== */
 
@@ -78,6 +91,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-text-title);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
@@ -94,6 +108,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-text-main);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connection-link:hover,
@@ -103,12 +118,13 @@ img {
 
 .connection-icon {
   margin-right: 10px;
-  color: var(--color-text-main);
+  fill: var(--color-text-main);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connection-link:hover > .connection-icon,
 .connection-link:focus > .connection-icon {
-  fill: currentColor;
+  fill: var(--color-button-hover);
 }
 
 .header-container {
@@ -189,6 +205,7 @@ img {
   cursor: pointer;
   border-radius: 4px;
   padding: 10px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -248,6 +265,29 @@ img {
 .activity.section {
   padding-top: 0px;
 }
+
+.activity-item {
+  position: relative;
+}
+.activity-description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-family: var(--font-family-main);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--color-logo-dark-bgd);
+  background: rgba(47, 48, 58, 0.8);
+}
+
 /* ==========END FEATURES========== */
 
 /* ==========START WHAT ARE WE DOING========== */
@@ -309,6 +349,7 @@ img {
 }
 .social-icon {
   fill: var(--color-fill-icon);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link {
   display: flex;
@@ -317,6 +358,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -348,6 +390,7 @@ img {
   align-items: center;
   justify-content: center;
   fill: var(--color-fill-icon);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -379,6 +422,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-logo-dark-bgd);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress-location:hover,
 .adress-location:focus {
@@ -389,6 +433,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-text-adress-link);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress-link:hover,
 .adress-link:focus {
@@ -424,6 +469,7 @@ img {
 
 .footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer .social-link:hover,
 .footer .social-link:focus {
@@ -446,6 +492,8 @@ img {
   cursor: pointer;
   border-radius: 4px;
   border: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filters-btn:hover,
 .filters-btn:focus {
@@ -506,6 +554,7 @@ img {
 }
 .drafts-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ==========END PORTFOLIO========== */
 
